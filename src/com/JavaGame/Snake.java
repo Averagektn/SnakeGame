@@ -105,6 +105,7 @@ public class Snake<E> extends ArrayList<BodyPart> {
         this.add(0, new BodyPart(tailX, tailY, SIZE_CELL));
 
     }
+    
 
     private void goForSnakeHead(String direction) {
 

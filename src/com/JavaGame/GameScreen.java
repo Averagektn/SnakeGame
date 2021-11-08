@@ -48,9 +48,9 @@ public class GameScreen extends JPanel implements ActionListener {
     public static enum STATE {
         MENU,
         GAME,
-        GAMEOVER
+        GAMEOVER,
+        HELP
     }
-
     public static STATE State = STATE.MENU;
 
     public GameScreen() {
@@ -152,7 +152,9 @@ public class GameScreen extends JPanel implements ActionListener {
             this.addMouseListener(new MouseInput());
         } else if (State == STATE.GAMEOVER) {
             menu.gameOverWord(g);
-
+        }
+        else if (State == STATE.HELP) {
+            menu.creatorListAndRules(g);
         }
     }
     //---------------------------------------------------------------

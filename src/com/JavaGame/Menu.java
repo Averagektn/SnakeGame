@@ -9,7 +9,7 @@ public class Menu extends JFrame {
     public Rectangle playButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 125, 100, 50);
     public Rectangle editorsButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 225, 100, 50);
     public Rectangle quitButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 325, 100, 50);
-    public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 275, 120, 40);
+    public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 275, 100, 40);
 
     public void render (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -31,15 +31,26 @@ public class Menu extends JFrame {
     }
 
     public void gameOverWord (Graphics g) {
-        Graphics2D g3d = (Graphics2D) g;
+
         Font fnt2 = new Font("arial", Font.BOLD, 60);
         g.setFont(fnt2);
         g.setColor(Color.WHITE);
-        g.drawString("Game Over", GameScreen.WIDTH / 7, 175);
+        g.drawString("Game Over", GameScreen.WIDTH / 8, 175);
 
-        Font fnt3 = new Font("arial", Font.BOLD, 30);
+        /**Font fnt3 = new Font("arial", Font.BOLD, 30);
         g.setFont(fnt3);
         g3d.draw(backToMenuButton);
         g.drawString("Menu", backToMenuButton.x + 20, backToMenuButton.y + 30);
+         **/
      }
+    public void creatorListAndRules (Graphics g) {
+        Font fnt4 = new Font("arial", Font.ITALIC, 20); //Font for creators/rule menu
+        Graphics2D g4d = (Graphics2D) g;
+        g.setFont(fnt4);
+        g4d.draw(backToMenuButton);
+        g.setColor(Color.WHITE);
+        g.drawString("Game over when: ", 20, 40);
+        g.drawString("- Snake crash with wall", 20, 80);
+        g.drawString("- Snake crash with itself", 20, 120);
+    }
 }
