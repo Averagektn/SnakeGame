@@ -1,4 +1,4 @@
-package com.company;
+package com.JavaGame;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;

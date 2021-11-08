@@ -1,4 +1,4 @@
-package com.company;
+package com.JavaGame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -50,6 +50,7 @@ public class GameScreen extends JPanel implements ActionListener {
         GAME,
         GAMEOVER
     }
+
     public static STATE State = STATE.MENU;
 
     public GameScreen() {

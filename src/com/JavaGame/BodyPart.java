@@ -1,4 +1,4 @@
-package com.company;
+package com.JavaGame;
 
 import java.awt.Color;
 import java.awt.Graphics;
