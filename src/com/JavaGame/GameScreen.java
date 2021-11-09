@@ -147,6 +147,7 @@ public class GameScreen extends JPanel implements ActionListener {
         }
         snake.draw(g);
         apples.draw(g);
+        menu.scoreCounter(g);
         } else if (State == STATE.MENU) {
             menu.render(g);
             this.addMouseListener(new MouseInput());

@@ -6,9 +6,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MouseInput extends JFrame implements MouseListener {
-    // public void ShowMessage() {
-    // JOptionPane.showMessageDialog( this, "Ivan_Dzerzhinsky, Korney_Afanasenka, Nikita_Glushachenko","Creators", JOptionPane.INFORMATION_MESSAGE);
-
 
 
     @Override
@@ -47,10 +44,10 @@ public class MouseInput extends JFrame implements MouseListener {
             }
         }
 
-        if (mx >= GameScreen.WIDTH / 7 + 100 && mx < GameScreen.WIDTH / 7 + 200 && GameScreen.State == GameScreen.STATE.HELP) {
+        if (mx >= GameScreen.WIDTH / 7 + 100 && mx < GameScreen.WIDTH / 7 + 200) {
             if (my >= 275 && my <= 340) {
-                //Pressed Play Button
-                GameScreen.State = GameScreen.STATE.GAME;
+
+                GameScreen.State = GameScreen.STATE.MENU;
             }
         }
     }

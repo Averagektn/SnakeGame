@@ -9,7 +9,7 @@ public class Menu extends JFrame {
     public Rectangle playButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 125, 100, 50);
     public Rectangle editorsButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 225, 100, 50);
     public Rectangle quitButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 325, 100, 50);
-    public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 275, 100, 40);
+    public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 275, 100, 50);
 
     public void render (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -28,6 +28,14 @@ public class Menu extends JFrame {
         g2d.draw(quitButton);
         g.drawString("Quit", quitButton.x + 20, quitButton.y + 35);
 
+    }
+
+    public void scoreCounter (Graphics g) {
+        Font scF = new Font("arial", Font.BOLD, 20);
+        g.setFont(scF);
+        //scF -- Font for score
+        g.setColor(Color.RED);
+        g.drawString("Score: ", 20, 18);
     }
 
     public void gameOverWord (Graphics g) {
@@ -49,6 +57,7 @@ public class Menu extends JFrame {
         g.setFont(fnt4);
         g4d.draw(backToMenuButton);
         g.setColor(Color.WHITE);
+        //g.drawString("Menu", GameScreen.WIDTH / 7, 275);
         g.drawString("Game over when: ", 20, 40);
         g.drawString("- Snake crash with wall", 20, 80);
         g.drawString("- Snake crash with itself", 20, 120);
