@@ -1,6 +1,5 @@
 package com.JavaGame;
 
-import javax.print.DocFlavor;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
@@ -69,7 +68,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
     public void increaseScore() {
         SCORE += 1;
         System.out.println(SCORE);
-
+        //return SCORE;
     }
 
 

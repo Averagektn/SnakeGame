@@ -39,8 +39,9 @@ public class Menu extends JFrame{
         g.setFont(scF);
         //scF -- Font for score
         g.setColor(Color.RED);
-        //int Score = getScore.SCORE;
-        g.drawString("Score: "  , 20, 18);
+        //int Score = getScore.increaseScore();
+
+        g.drawString("Score: " , 20, 18);
     }
 
     public void gameOverWord (Graphics g) {
