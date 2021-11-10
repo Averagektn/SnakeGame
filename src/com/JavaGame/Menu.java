@@ -2,14 +2,17 @@ package com.JavaGame;
 
 import javax.swing.*;
 import java.awt.*;
+
 //import java.net.PortUnreachableException;
 
-public class Menu extends JFrame {
+public class Menu extends JFrame{
 
     public Rectangle playButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 125, 100, 50);
     public Rectangle editorsButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 225, 100, 50);
     public Rectangle quitButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 325, 100, 50);
     public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 275, 100, 50);
+
+    //AppleManager getScore;
 
     public void render (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -30,12 +33,14 @@ public class Menu extends JFrame {
 
     }
 
+
     public void scoreCounter (Graphics g) {
         Font scF = new Font("arial", Font.BOLD, 20);
         g.setFont(scF);
         //scF -- Font for score
         g.setColor(Color.RED);
-        g.drawString("Score: ", 20, 18);
+        //int Score = getScore.SCORE;
+        g.drawString("Score: "  , 20, 18);
     }
 
     public void gameOverWord (Graphics g) {

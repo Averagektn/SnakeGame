@@ -1,5 +1,6 @@
 package com.JavaGame;
 
+import javax.print.DocFlavor;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
@@ -23,6 +24,8 @@ public class AppleManager<E> extends ArrayList<Apple> {
         random = new Random();
 
     }
+
+
 
     public void addAppleIfNot(Snake snake) {
 
@@ -64,7 +67,10 @@ public class AppleManager<E> extends ArrayList<Apple> {
         return false;
     }
     public void increaseScore() {
-        this.SCORE += 1;
-        //System.out.println(this.SCORE);
+        SCORE += 1;
+        System.out.println(SCORE);
+
     }
+
+
 }
