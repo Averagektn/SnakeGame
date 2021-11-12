@@ -65,10 +65,10 @@ public class AppleManager<E> extends ArrayList<Apple> {
         }
         return false;
     }
-    public void increaseScore() {
+    public int increaseScore() {
         SCORE += 1;
-        System.out.println(SCORE);
-        //return SCORE;
+        //System.out.println(SCORE);
+        return SCORE;
     }
 
 

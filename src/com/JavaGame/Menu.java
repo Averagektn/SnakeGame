@@ -10,9 +10,10 @@ public class Menu extends JFrame{
     public Rectangle playButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 125, 100, 50);
     public Rectangle editorsButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 225, 100, 50);
     public Rectangle quitButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 325, 100, 50);
-    public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 275, 100, 50);
+    public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7, 275, 100, 50);
 
     //AppleManager getScore;
+
 
     public void render (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -38,10 +39,11 @@ public class Menu extends JFrame{
         Font scF = new Font("arial", Font.BOLD, 20);
         g.setFont(scF);
         //scF -- Font for score
+
         g.setColor(Color.RED);
         //int Score = getScore.increaseScore();
 
-        g.drawString("Score: " , 20, 18);
+        g.drawString("Score: ", 20, 18);
     }
 
     public void gameOverWord (Graphics g) {
@@ -57,15 +59,21 @@ public class Menu extends JFrame{
         g.drawString("Menu", backToMenuButton.x + 20, backToMenuButton.y + 30);
          **/
      }
-    public void creatorListAndRules (Graphics g) {
-        Font fnt4 = new Font("arial", Font.ITALIC, 20); //Font for creators/rule menu
-        Graphics2D g4d = (Graphics2D) g;
-        g.setFont(fnt4);
+    public void creatorListAndRules (Graphics с) {
+        Font fnt4 = new Font("arial", Font.ITALIC, 30); //Font for creators/rule menu
+        Graphics2D g4d = (Graphics2D) с;
+        с.setFont(fnt4);
         g4d.draw(backToMenuButton);
-        g.setColor(Color.WHITE);
-        //g.drawString("Menu", GameScreen.WIDTH / 7, 275);
-        g.drawString("Game over when: ", 20, 40);
-        g.drawString("- Snake crash with wall", 20, 80);
-        g.drawString("- Snake crash with itself", 20, 120);
+        с.setColor(Color.WHITE);
+        с.drawString("-->Menu<--", 130, 300);
+        с.drawString("Game over when: ", 20, 40);
+        с.drawString("- Snake crash with wall", 20, 80);
+        с.drawString("- Snake crash with itself", 20, 120);
+
+        Font fnt5 = new Font("arial", Font.BOLD, 10);
+        с.setFont(fnt5);
+        с.setColor(Color.WHITE);
+        с.drawString("Ivan Dzerzhinsky, Korney Afanasenka, Nikita Glushachenko", GameScreen.WIDTH / 7, 375);
+
     }
 }
