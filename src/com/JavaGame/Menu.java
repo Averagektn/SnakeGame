@@ -5,15 +5,12 @@ import java.awt.*;
 
 //import java.net.PortUnreachableException;
 
-public class Menu extends JFrame{
+public class Menu extends JFrame {
 
     public Rectangle playButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 125, 100, 50);
     public Rectangle editorsButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 225, 100, 50);
     public Rectangle quitButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 325, 100, 50);
     public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7, 275, 100, 50);
-
-    //AppleManager getScore;
-
 
     public void render (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -34,16 +31,14 @@ public class Menu extends JFrame{
 
     }
 
-
     public void scoreCounter (Graphics g) {
         Font scF = new Font("arial", Font.BOLD, 20);
         g.setFont(scF);
         //scF -- Font for score
 
         g.setColor(Color.RED);
-        //int Score = getScore.increaseScore();
 
-        g.drawString("Score: ", 20, 18);
+        g.drawString("Score: " + Score.getScore(), 20, 18);
     }
 
     public void gameOverWord (Graphics g) {
@@ -53,6 +48,10 @@ public class Menu extends JFrame{
         g.setColor(Color.WHITE);
         g.drawString("Game Over", GameScreen.WIDTH / 8, 175);
 
+        Font fntMenuBack = new Font("italiano", Font.ITALIC, 20);
+        g.setFont(fntMenuBack);
+        g.drawString("Back to menu", 150,  300);
+
         /**Font fnt3 = new Font("arial", Font.BOLD, 30);
         g.setFont(fnt3);
         g3d.draw(backToMenuButton);
@@ -60,7 +59,7 @@ public class Menu extends JFrame{
          **/
      }
     public void creatorListAndRules (Graphics с) {
-        Font fnt4 = new Font("arial", Font.ITALIC, 30); //Font for creators/rule menu
+        Font fnt4 = new Font("arial1", Font.ITALIC, 30); //Font for creators/rule menu
         Graphics2D g4d = (Graphics2D) с;
         с.setFont(fnt4);
         g4d.draw(backToMenuButton);

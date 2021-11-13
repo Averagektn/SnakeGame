@@ -44,9 +44,16 @@ public class MouseInput extends JFrame implements MouseListener {
             }
         }
 
-        if (mx >= GameScreen.WIDTH / 7 + 100 && mx < GameScreen.WIDTH / 7 + 200) {
+        //g.drawString("Back to menu", 150,  300);
+
+        if (mx >= GameScreen.WIDTH / 7 + 100 && mx < GameScreen.WIDTH / 7 + 200 && GameScreen.State == GameScreen.STATE.HELP) {
             if (my >= 275 && my <= 340) {
 
+                GameScreen.State = GameScreen.STATE.MENU;
+            }
+        }
+        if (mx >= 100 && mx < 200 && GameScreen.State == GameScreen.STATE.GAMEOVER)  {
+            if (my >=250 && my <= 350) {
                 GameScreen.State = GameScreen.STATE.MENU;
             }
         }

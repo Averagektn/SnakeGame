@@ -1,6 +1,7 @@
 package com.JavaGame;
 
 import java.awt.Graphics;
+import java.beans.JavaBean;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,7 +10,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
     private int fieldSize;
     private int sizeCell;
 
-    public int SCORE = 0;
+    private int SCORE = 0;
 
     /**
      *
@@ -23,8 +24,6 @@ public class AppleManager<E> extends ArrayList<Apple> {
         random = new Random();
 
     }
-
-
 
     public void addAppleIfNot(Snake snake) {
 
@@ -56,7 +55,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
         for (int i = 0; i < this.size(); i++) {
 
             if (this.get(i).getxCoor() == x && this.get(i).getyCoor() == y) {
-                increaseScore();
+                Score.increaseScore(1);
                 this.remove(i);
                 return true;
 
@@ -65,11 +64,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
         }
         return false;
     }
-    public int increaseScore() {
-        SCORE += 1;
-        //System.out.println(SCORE);
-        return SCORE;
-    }
+
 
 
 }

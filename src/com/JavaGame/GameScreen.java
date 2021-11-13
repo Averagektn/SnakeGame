@@ -116,6 +116,7 @@ public class GameScreen extends JPanel implements ActionListener {
         snake.setAlive(false);
         repaint();
         clock.stop();
+        Score.resetScore();
         State = STATE.GAMEOVER;
     }
 
