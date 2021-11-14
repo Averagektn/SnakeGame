@@ -16,7 +16,6 @@ public class Apple {
         height = tileSize;
     }
 
-
     public void draw(Graphics g) {
         g.setColor(Color.RED);
         g.fillRect(GameScreen.OFFSET+xCoor * width, GameScreen.OFFSET+yCoor * height, width, height);
