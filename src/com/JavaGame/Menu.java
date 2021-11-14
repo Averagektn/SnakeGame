@@ -64,15 +64,15 @@ public class Menu extends JFrame {
         с.setFont(fnt4);
         g4d.draw(backToMenuButton);
         с.setColor(Color.WHITE);
-        с.drawString("-->Menu<--", 130, 300);
-        с.drawString("Game over when: ", 20, 40);
-        с.drawString("- Snake crash with wall", 20, 80);
-        с.drawString("- Snake crash with itself", 20, 120);
+        с.drawString("-->Back to menu<--", 65, 300);
+        с.drawString("The game ends if: ", 20, 40);
+        с.drawString("- The snake hits the wall", 20, 80);
+        с.drawString("- The snake hits itself", 20, 120);
 
-        Font fnt5 = new Font("arial", Font.BOLD, 10);
+        Font fnt5 = new Font("arial", Font.BOLD, 11);
         с.setFont(fnt5);
         с.setColor(Color.WHITE);
-        с.drawString("Ivan Dzerzhinsky, Korney Afanasenka, Nikita Glushachenko", GameScreen.WIDTH / 7, 375);
+        с.drawString("Developed by: Ivan Lysiakoff, Korney Afanasenka, Nikita Glushachenko", GameScreen.WIDTH / 100, 375);
 
     }
 }

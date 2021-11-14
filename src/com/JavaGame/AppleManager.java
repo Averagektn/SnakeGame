@@ -1,7 +1,7 @@
 package com.JavaGame;
 
 import java.awt.Graphics;
-import java.beans.JavaBean;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -10,7 +10,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
     private int fieldSize;
     private int sizeCell;
 
-    private int SCORE = 0;
+
 
     /**
      *

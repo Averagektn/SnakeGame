@@ -13,26 +13,27 @@ import java.awt.*;
 
 public class Frame extends JFrame {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L; /** Сохраняет текущее состояние окна?**/
 
     public Frame() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Game Snake");
-        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); /** Закрытие окна **/
+        setTitle("Game Snake"); /** Название окна **/
+        setResizable(false); /** Невозможно изменть размер окна. Почему?**/
 
-        init();
+        init(); /** Вызов init? **/
     }
 
     public void init() {
-        setLayout(new GridLayout(1, 1, 0, 0));
-        GameScreen s = new GameScreen();
-        add(s);
-        pack();
-        setLocationRelativeTo(null);
-        setVisible(true);
+        setLayout(new GridLayout(1, 1, 0, 0)); /** Таблица 1х1. hgap,vgap?**/
+        GameScreen Screen = new GameScreen();
+        add(Screen);
+        pack(); /** Устанавливает минимальный размер, достаточный для всех компонентов **/
+        setLocationRelativeTo(null); /** Центрирование **/
+        setVisible(true); /** Окно видимо **/
     }
-
+      /** Почему не в начале? **/
     public static void main(String[] args) {
+
         new Frame();
     }
 
