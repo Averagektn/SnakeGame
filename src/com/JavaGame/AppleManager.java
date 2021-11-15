@@ -9,7 +9,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
     private int fieldSize;
     private int sizeCell;
 
-    private int SCORE = 0;
+
 
     /**
      *
@@ -18,8 +18,8 @@ public class AppleManager<E> extends ArrayList<Apple> {
     private static final long serialVersionUID = 1L;
 
     public AppleManager(int fieldSizeParam, int sizeCellParam) {
-        fieldSize = fieldSizeParam;
-        sizeCell = sizeCellParam;
+        fieldSize = fieldSizeParam; /**????**/
+        sizeCell = sizeCellParam; /**????**/
 
         random = new Random();
 
