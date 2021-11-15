@@ -1,3 +1,4 @@
+import com.JavaGame.Frame;
 import com.JavaGame.Score;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,4 +9,7 @@ public class ScoreTest {
         Score.increaseScore(1);
         Assert.assertEquals(1, Score.getScore());
     }
+
 }
+
+

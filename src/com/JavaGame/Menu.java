@@ -7,6 +7,8 @@ import java.awt.*;
 
 public class Menu extends JFrame {
 
+    private static Menu instanceMenu = new Menu();
+
     public Rectangle playButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 125, 100, 50);
     public Rectangle editorsButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 225, 100, 50);
     public Rectangle quitButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 325, 100, 50);
@@ -76,5 +78,9 @@ public class Menu extends JFrame {
         с.setColor(Color.WHITE);
         с.drawString("Developed by: Ivan Lysiakoff, Korney Afanasenka, Nikita Glushachenko", GameScreen.WIDTH / 100, 375);
 
+    }
+
+    public static Menu getInstance() {
+        return instanceMenu;
     }
 }

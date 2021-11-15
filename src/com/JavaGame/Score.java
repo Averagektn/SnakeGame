@@ -23,4 +23,6 @@ public class Score {
     public static int getScore() {
         return score;
     }
+
 }
+
