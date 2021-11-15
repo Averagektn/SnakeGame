@@ -137,7 +137,7 @@ public class Snake<E> extends ArrayList<BodyPart> {
         this.alive = alive;
     }
 
-    public static Snake getInstance() {
+    public static Snake getInstanceSnake() {
         return instance;
     }
 

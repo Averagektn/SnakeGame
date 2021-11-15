@@ -6,6 +6,6 @@ import org.junit.Test;
 public class SnakeTest {
     @Test
     public void isNotNull() {
-        Assert.assertNotNull(Snake.getInstance());
+        Assert.assertNotNull(Snake.getInstanceSnake());
     }
 }
