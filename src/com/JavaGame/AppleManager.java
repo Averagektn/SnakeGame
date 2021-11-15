@@ -1,7 +1,6 @@
 package com.JavaGame;
 
 import java.awt.Graphics;
-import java.beans.JavaBean;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -15,6 +14,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
     /**
      *
      */
+
     private static final long serialVersionUID = 1L;
 
     public AppleManager(int fieldSizeParam, int sizeCellParam) {
@@ -35,7 +35,6 @@ public class AppleManager<E> extends ArrayList<Apple> {
             while (snake.snakeHasCoord(xCoor, yCoor)) {
                 xCoor = random.nextInt(fieldSize);
                 yCoor = random.nextInt(fieldSize);
-
             }
 
             this.add(new Apple(xCoor, yCoor, sizeCell));

@@ -52,6 +52,8 @@ public class Menu extends JFrame {
         g.setFont(fntMenuBack);
         g.drawString("Back to menu", 150,  300);
 
+        g.drawString("Your score: " + Score.getScore(), 150, 200);
+
         /**Font fnt3 = new Font("arial", Font.BOLD, 30);
         g.setFont(fnt3);
         g3d.draw(backToMenuButton);

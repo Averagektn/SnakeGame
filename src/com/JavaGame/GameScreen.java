@@ -118,14 +118,15 @@ public class GameScreen extends JPanel implements ActionListener {
         clock.stop();
         Score.resetScore();
         State = STATE.GAMEOVER;
+        Score.resetScore();
     }
-
 
     private void restart() {
 
         snake.clear();
         apples.clear();
         snake.setAlive(true);
+
         start();
     }
     //---------------------------------------------------------------

@@ -3,7 +3,6 @@ package com.JavaGame;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Snake<E> extends ArrayList<BodyPart> {
 
@@ -15,6 +14,7 @@ public class Snake<E> extends ArrayList<BodyPart> {
     /**
      *
      */
+
     private static final long serialVersionUID = 1L;
     private int tailX;
     private int tailY;
