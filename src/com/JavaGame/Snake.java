@@ -15,13 +15,14 @@ public class Snake<E> extends ArrayList<BodyPart> {
      *
      */
 
+
     private static final long serialVersionUID = 1L;
     private int tailX;
     private int tailY;
     private boolean alive;
 
 
-
+    private static Snake instance = new Snake();
 
     public Snake() {
         setAlive(true);
@@ -58,7 +59,7 @@ public class Snake<E> extends ArrayList<BodyPart> {
 
     public void draw(Graphics g) {
         Color color = Color.GREEN;
-        if(alive==false){
+        if(alive == false){
             color = Color.WHITE;
         }
 
@@ -134,6 +135,10 @@ public class Snake<E> extends ArrayList<BodyPart> {
 
     public void setAlive(boolean alive) {
         this.alive = alive;
+    }
+
+    public static Snake getInstance() {
+        return instance;
     }
 
 }

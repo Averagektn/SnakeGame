@@ -12,7 +12,7 @@ import java.awt.*;
  **/
 
 public class Frame extends JFrame {
-    //private static Frame instance = new Frame();
+    private static Frame instance1 = new Frame();
 
     private static final long serialVersionUID = 1L;
 
@@ -38,6 +38,6 @@ public class Frame extends JFrame {
 
         new Frame();
     }
-
+    public static Frame getInstance() { return instance1; }
 
 }
