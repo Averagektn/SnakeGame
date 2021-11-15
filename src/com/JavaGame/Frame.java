@@ -12,26 +12,26 @@ import java.awt.*;
  **/
 
 public class Frame extends JFrame {
-    private static Frame instance = new Frame();
+    //private static Frame instance = new Frame();
 
-    private static final long serialVersionUID = 1L; /** Сохраняет текущее состояние окна?**/
+    private static final long serialVersionUID = 1L;
 
     public Frame() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); /** Закрытие окна **/
-        setTitle("Game Snake"); /** Название окна **/
-        setResizable(false); /** Невозможно изменть размер окна. Почему?**/
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Game Snake");
+        setResizable(false);
 
-        init(); /** Вызов init? **/
+        init();
     }
 
     public void init() {
-        setLayout(new GridLayout(1, 1, 0, 0)); /** Таблица 1х1. hgap,vgap?**/
+        setLayout(new GridLayout(1, 1, 0, 0));
         GameScreen Screen = new GameScreen();
         add(Screen);
-        pack(); /** Устанавливает минимальный размер, достаточный для всех компонентов **/
+        pack();
         setLocationRelativeTo(null);
         setVisible(true);
-        WordsLabel.getInstance().updateText("Snake Game");
+        //WordsLabel.getInstance().updateText("Snake Game");
     }
 
     public static void main(String[] args) {
@@ -39,7 +39,5 @@ public class Frame extends JFrame {
         new Frame();
     }
 
-    public static synchronized Frame getInstance(){
-        return instance;
-    }
+
 }

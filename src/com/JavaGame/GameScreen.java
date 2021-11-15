@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.Serial;
 
 
 public class GameScreen extends JPanel implements ActionListener {
@@ -14,7 +13,6 @@ public class GameScreen extends JPanel implements ActionListener {
     /**
      *
      */
-    @Serial
     private static final long serialVersionUID = 1L;
     public static final int OFFSET = 20;
     //public static final int SEPARATOR = 1;
@@ -22,6 +20,8 @@ public class GameScreen extends JPanel implements ActionListener {
     public static final int FIELD_SIZE = 30;
 
     private int score;
+
+    private static GameScreen instance = new GameScreen();
 
     public static final int WIDTH = 400, HEIGHT = 400;
     public static final String DOWN = "Down";
@@ -52,6 +52,7 @@ public class GameScreen extends JPanel implements ActionListener {
         GAMEOVER,
         HELP
     }
+
     public static STATE State = STATE.MENU;
 
     public GameScreen() {
@@ -104,7 +105,7 @@ public class GameScreen extends JPanel implements ActionListener {
 
         }
 
-        if (snake.checkCrashWithWall(0, FIELD_SIZE - 1, 0, FIELD_SIZE - 1)  || snake.checkSnakeSuicide()) {
+        if (snake.checkCrashWithWall(0, FIELD_SIZE - 1, 0, FIELD_SIZE - 1) || snake.checkSnakeSuicide()) {
             stop();
             return;
         }
@@ -129,6 +130,7 @@ public class GameScreen extends JPanel implements ActionListener {
 
         start();
     }
+
     //---------------------------------------------------------------
     public void paint(Graphics g) {
         // System.out.println(Math.random());
@@ -140,27 +142,27 @@ public class GameScreen extends JPanel implements ActionListener {
         //---------------------------------------------------------------
         if (State == STATE.GAME) {
             g.setColor(Color.BLACK);
-        for (int i = 0; i < FIELD_SIZE + 1; i++) {
-            g.drawLine(OFFSET + i * SIZE_CELL, OFFSET, OFFSET + i * SIZE_CELL,
-                    OFFSET + SIZE_CELL * FIELD_SIZE);
-        }
-        for (int i = 0; i < FIELD_SIZE + 1; i++) {
-            g.drawLine(OFFSET, OFFSET + i * SIZE_CELL, OFFSET + SIZE_CELL
-                    * FIELD_SIZE, OFFSET + i * SIZE_CELL);
-        }
-        snake.draw(g);
-        apples.draw(g);
-        menu.scoreCounter(g);
+            for (int i = 0; i < FIELD_SIZE + 1; i++) {
+                g.drawLine(OFFSET + i * SIZE_CELL, OFFSET, OFFSET + i * SIZE_CELL,
+                        OFFSET + SIZE_CELL * FIELD_SIZE);
+            }
+            for (int i = 0; i < FIELD_SIZE + 1; i++) {
+                g.drawLine(OFFSET, OFFSET + i * SIZE_CELL, OFFSET + SIZE_CELL
+                        * FIELD_SIZE, OFFSET + i * SIZE_CELL);
+            }
+            snake.draw(g);
+            apples.draw(g);
+            menu.scoreCounter(g);
         } else if (State == STATE.MENU) {
             menu.render(g);
             this.addMouseListener(new MouseInput());
         } else if (State == STATE.GAMEOVER) {
             menu.gameOverWord(g);
-        }
-        else if (State == STATE.HELP) {
+        } else if (State == STATE.HELP) {
             menu.creatorListAndRules(g);
         }
     }
+
     //---------------------------------------------------------------
     private class Key implements KeyListener {
 
@@ -169,20 +171,20 @@ public class GameScreen extends JPanel implements ActionListener {
             int code = e.getKeyCode();
             String onClicked = KeyEvent.getKeyText(code);
 
-                if (onClicked == GameScreen.DOWN
-                        && direction != GameScreen.TOP) {
-                    keyDirection = DOWN;
-                } else if (onClicked == GameScreen.TOP
-                        && direction != GameScreen.DOWN) {
-                    keyDirection = TOP;
-                } else if (onClicked == GameScreen.RIGHT
-                        && direction != GameScreen.LEFT) {
-                    keyDirection = RIGHT;
-                } else if (onClicked == GameScreen.LEFT
-                        && direction != GameScreen.RIGHT) {
-                    keyDirection = LEFT;
-                } else if (onClicked == "Space") {
-                    restart();
+            if (onClicked == GameScreen.DOWN
+                    && direction != GameScreen.TOP) {
+                keyDirection = DOWN;
+            } else if (onClicked == GameScreen.TOP
+                    && direction != GameScreen.DOWN) {
+                keyDirection = TOP;
+            } else if (onClicked == GameScreen.RIGHT
+                    && direction != GameScreen.LEFT) {
+                keyDirection = RIGHT;
+            } else if (onClicked == GameScreen.LEFT
+                    && direction != GameScreen.RIGHT) {
+                keyDirection = LEFT;
+            } else if (onClicked == "Space") {
+                restart();
             }
         }
 
@@ -198,4 +200,7 @@ public class GameScreen extends JPanel implements ActionListener {
 
     }
 
+    public static GameScreen getInstance() {
+        return instance;
+    }
 }
