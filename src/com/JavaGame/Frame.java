@@ -12,6 +12,7 @@ import java.awt.*;
  **/
 
 public class Frame extends JFrame {
+    private static Frame instance = new Frame();
 
     private static final long serialVersionUID = 1L; /** Сохраняет текущее состояние окна?**/
 
@@ -28,13 +29,17 @@ public class Frame extends JFrame {
         GameScreen Screen = new GameScreen();
         add(Screen);
         pack(); /** Устанавливает минимальный размер, достаточный для всех компонентов **/
-        setLocationRelativeTo(null); /** Центрирование **/
-        setVisible(true); /** Окно видимо **/
+        setLocationRelativeTo(null);
+        setVisible(true);
+        WordsLabel.getInstance().updateText("Snake Game");
     }
-      /** Почему не в начале? **/
+
     public static void main(String[] args) {
 
         new Frame();
     }
 
+    public static synchronized Frame getInstance(){
+        return instance;
+    }
 }
