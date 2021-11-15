@@ -1,12 +1,12 @@
 package com.JavaGame;
 
 import javax.swing.*;
-import javax.swing.plaf.nimbus.State;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MouseInput extends JFrame implements MouseListener {
 
+    private static MouseInput instanceMouseInput = new MouseInput();
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -72,5 +72,8 @@ public class MouseInput extends JFrame implements MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
 
+    }
+    public static MouseInput getInstance() {
+        return instanceMouseInput;
     }
 }
