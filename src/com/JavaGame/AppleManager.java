@@ -18,8 +18,8 @@ public class AppleManager<E> extends ArrayList<Apple> {
     private static final long serialVersionUID = 1L;
 
     public AppleManager(int fieldSizeParam, int sizeCellParam) {
-        fieldSize = fieldSizeParam; /**????**/
-        sizeCell = sizeCellParam; /**????**/
+        fieldSize = fieldSizeParam;
+        sizeCell = sizeCellParam;
 
         random = new Random();
 
@@ -57,6 +57,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
                 Score.increaseScore(1);
                 this.remove(i);
                 return true;
+                //Score.saveScore();
 
             }
 

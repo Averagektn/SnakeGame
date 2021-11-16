@@ -52,9 +52,9 @@ public class Menu extends JFrame {
 
         Font fntMenuBack = new Font("italiano", Font.ITALIC, 20);
         g.setFont(fntMenuBack);
-        g.drawString("Back to menu", 150,  300);
+        g.drawString("Back to menu. Click space", GameScreen.WIDTH / 4,  300);
 
-        g.drawString("Your score: " + Score.getScore(), 150, 200);
+        //g.drawString("Your score: " + Score.getScore(), 150, 200);
 
         /**Font fnt3 = new Font("arial", Font.BOLD, 30);
         g.setFont(fnt3);

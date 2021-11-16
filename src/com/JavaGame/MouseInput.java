@@ -36,7 +36,7 @@ public class MouseInput extends JFrame implements MouseListener {
         }
         //Help button
         //WARNING -- This button shows name of creators of the project
-        //!!!EDIT AND FIX
+
         if (mx >= GameScreen.WIDTH / 7 + 100 && mx < GameScreen.WIDTH / 7 + 200 && GameScreen.State == GameScreen.STATE.MENU) {
             if (my >= 225 && my <= 275) {
                 //Pressed Help Button
@@ -52,8 +52,8 @@ public class MouseInput extends JFrame implements MouseListener {
                 GameScreen.State = GameScreen.STATE.MENU;
             }
         }
-        if (mx >= 100 && mx < 200 && GameScreen.State == GameScreen.STATE.GAMEOVER)  {
-            if (my >=250 && my <= 350) {
+        if (mx >= 150 && mx < 200 && GameScreen.State == GameScreen.STATE.GAMEOVER)  {
+            if (my >=300 && my <= 320) {
                 GameScreen.State = GameScreen.STATE.MENU;
             }
         }

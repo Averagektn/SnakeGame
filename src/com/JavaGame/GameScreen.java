@@ -127,7 +127,7 @@ public class GameScreen extends JPanel implements ActionListener {
         snake.clear();
         apples.clear();
         snake.setAlive(true);
-
+        GameScreen.State = STATE.MENU;
         start();
     }
 
@@ -183,7 +183,7 @@ public class GameScreen extends JPanel implements ActionListener {
             } else if (onClicked == GameScreen.LEFT
                     && direction != GameScreen.RIGHT) {
                 keyDirection = LEFT;
-            } else if (onClicked == "Space") {
+            } else if (onClicked == "Space" && GameScreen.State == STATE.GAMEOVER) {
                 restart();
             }
         }

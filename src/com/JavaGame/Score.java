@@ -10,6 +10,7 @@ package com.JavaGame;
 
 public class Score {
     private static int score = 0;
+    private static int lastScore;
     //private static boolean alive = true;
 
     public static void resetScore() {
@@ -24,5 +25,8 @@ public class Score {
         return score;
     }
 
+    /**public static void saveScore(int score) {
+        lastScore = score;
+    }**/
 }
 
