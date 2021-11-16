@@ -110,7 +110,7 @@ public class Snake<E> extends ArrayList<BodyPart> {
     }
 
 
-    public void goForSnakeHead(String direction) {
+    private void goForSnakeHead(String direction) {
 
         BodyPart head = this.get(this.size() - 1);
         if (direction == DOWN) {
@@ -140,6 +140,5 @@ public class Snake<E> extends ArrayList<BodyPart> {
     public static Snake getInstanceSnake() {
         return instance;
     }
-
 
 }
