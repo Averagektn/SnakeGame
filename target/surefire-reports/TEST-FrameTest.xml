@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="FrameTest" time="0.208" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="FrameTest" time="0.19" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.2.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -29,7 +29,7 @@
     <property name="maven.ext.class.path" value="E:\IntelliJ\IntelliJ IDEA Community Edition 2021.2.1\plugins\maven\lib\maven-event-listener.jar"/>
     <property name="classworlds.conf" value="E:\IntelliJ\IntelliJ IDEA Community Edition 2021.2.1\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.library.path" value="E:\jdk foe JAVA\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:\Delphi 7\Delphi 7\Bin;E:\Delphi 7\Delphi 7\Projects\Bpl\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\ivanl\AppData\Local\Microsoft\WindowsApps;C:\Users\ivanl\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ivanl\AppData\Local\GitHubDesktop\bin;E:\apache-maven-3.8.3\bin;;."/>
+    <property name="java.library.path" value="E:\jdk foe JAVA\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:\Delphi 7\Delphi 7\Bin;E:\Delphi 7\Delphi 7\Projects\Bpl\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\ivanl\AppData\Local\Microsoft\WindowsApps;C:\Users\ivanl\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ivanl\AppData\Local\GitHubDesktop\bin;."/>
     <property name="maven.conf" value="E:\IntelliJ\IntelliJ IDEA Community Edition 2021.2.1\plugins\maven\lib\maven3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="60.0"/>
@@ -59,5 +59,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="FrameTest" name="isNotNull" time="0.208"/>
+  <testcase classname="FrameTest" name="isNotNull" time="0.19"/>
 </testsuite>

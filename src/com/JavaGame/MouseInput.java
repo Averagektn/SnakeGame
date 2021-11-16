@@ -76,6 +76,4 @@ public class MouseInput extends JFrame implements MouseListener {
     public static MouseInput getInstance() {
         return instanceMouseInput;
     }
-
-
 }
