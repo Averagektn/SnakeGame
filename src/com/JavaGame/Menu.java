@@ -77,8 +77,9 @@ public class Menu extends JFrame {
         с.setFont(fnt5);
         с.setColor(Color.WHITE);
         с.drawString("Developed by: Ivan Lysiakoff, Korney Afanasenka, Nikita Glushachenko", GameScreen.WIDTH / 100, 375);
-
     }
+
+
 
     public static Menu getInstance() {
         return instanceMenu;
