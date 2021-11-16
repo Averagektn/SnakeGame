@@ -8,4 +8,10 @@ public class MenuTest {
     public void isNotNull() {
         Assert.assertNotNull(Menu.getInstance());
     }
+
+    /**@Test
+    public void isDrawn() {
+        Assert.assertEquals();
+    }**/
+
 }
