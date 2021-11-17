@@ -11,7 +11,7 @@ package com.JavaGame;
 public class Score {
     private static int score = 0;
     private static int lastScore;
-    //private static boolean alive = true;
+    private static Score instanceScore = new Score();
 
     public static void resetScore() {
         score = 0;
@@ -28,5 +28,9 @@ public class Score {
     /**public static void saveScore(int score) {
         lastScore = score;
     }**/
+    public static Score getInstanceScore() {
+        return instanceScore;
+    }
+
 }
 
