@@ -15,7 +15,7 @@ public class AppleManager<E> extends ArrayList<Apple> {
      *
      */
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;/**Delete**/
 
     public AppleManager(int fieldSizeParam, int sizeCellParam) {
         fieldSize = fieldSizeParam;
