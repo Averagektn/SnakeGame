@@ -15,3 +15,11 @@ public class Frame extends JFrame {
     private static Frame instanceFrame = new Frame();
 
     private static final long serialVersionUID = 1L;
+
+    public Frame() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Game Snake");
+        setResizable(false);
+
+        init();
+    }
