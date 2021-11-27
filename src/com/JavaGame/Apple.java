@@ -28,3 +28,13 @@ public class Apple {
     public void setxCoor(int xCoor) {
         this.xCoor = xCoor;
     }
+    
+    public int getyCoor() {
+        return yCoor;
+    }
+
+    public void setyCoor(int yCoor) {/**Delete**/
+        this.yCoor = yCoor;
+    }
+
+}
