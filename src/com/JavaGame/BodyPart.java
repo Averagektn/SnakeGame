@@ -9,12 +9,7 @@ public class BodyPart {
 
 
 
-    public BodyPart(int xCoor, int yCoor, int tileSize) {
-        this.xCoor = xCoor;
-        this.yCoor = yCoor;
-        width = tileSize;
-        height = tileSize;
-    }
+
 
     public void draw(Graphics g, Color color) {
 
