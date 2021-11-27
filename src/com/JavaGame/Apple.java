@@ -27,7 +27,7 @@ public class Apple {
 
     public void setxCoor(int xCoor) {
         this.xCoor = xCoor;
-    }/**Delete**/
+    }
 
     public int getyCoor() {
         return yCoor;

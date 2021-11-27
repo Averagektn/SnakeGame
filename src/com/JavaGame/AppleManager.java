@@ -9,8 +9,6 @@ public class AppleManager<E> extends ArrayList<Apple> {
     private int fieldSize;
     private int sizeCell;
 
-
-
     /**
      *
      */
@@ -41,7 +39,6 @@ public class AppleManager<E> extends ArrayList<Apple> {
         }
 
     }
-
     public void draw(Graphics g) {
 
         for (int i = 0; i < this.size(); i++) {
@@ -65,6 +62,6 @@ public class AppleManager<E> extends ArrayList<Apple> {
         return false;
     }
 
-
-
 }
+
+

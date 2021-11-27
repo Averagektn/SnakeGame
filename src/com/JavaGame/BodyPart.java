@@ -7,8 +7,6 @@ public class BodyPart {
 
     private int xCoor, yCoor, width, height;
 
-
-
     public BodyPart(int xCoor, int yCoor, int tileSize) {
         this.xCoor = xCoor;
         this.yCoor = yCoor;

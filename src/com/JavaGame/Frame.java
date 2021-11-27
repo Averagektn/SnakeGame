@@ -14,8 +14,6 @@ import java.awt.*;
 public class Frame extends JFrame {
     private static Frame instanceFrame = new Frame();
 
-    private static final long serialVersionUID = 1L;/**Delete**/
-
     public Frame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Game Snake");
@@ -25,7 +23,6 @@ public class Frame extends JFrame {
     }
 
     public void init() {
-        setLayout(new GridLayout(1, 1, 0, 0));/**Delete**/
         GameScreen Screen = new GameScreen();
         add(Screen);
         pack();
@@ -33,11 +30,10 @@ public class Frame extends JFrame {
         setVisible(true);
         //WordsLabel.getInstance().updateText("Snake Game");
     }
-
     public static void main(String[] args) {
 
-        new Frame();/**Delete**/
     }
     public static Frame getInstance() { return instanceFrame; }
 
 }
+
