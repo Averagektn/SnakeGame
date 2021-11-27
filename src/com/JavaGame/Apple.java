@@ -25,3 +25,6 @@ public class Apple {
         return xCoor;
     }
 
+    public void setxCoor(int xCoor) {
+        this.xCoor = xCoor;
+    }
