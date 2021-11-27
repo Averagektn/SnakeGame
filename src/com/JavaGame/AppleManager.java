@@ -9,8 +9,6 @@ public class AppleManager<E> extends ArrayList<Apple> {
     private int fieldSize;
     private int sizeCell;
 
-
-
     /**
      *
      */
@@ -41,5 +39,29 @@ public class AppleManager<E> extends ArrayList<Apple> {
         }
 
     }
+    public void draw(Graphics g) {
+
+        for (int i = 0; i < this.size(); i++) {
+            this.get(i).draw(g);
+        }
+
+    }
+
+    public boolean isCoordHasFoodAndEat(int x, int y) {
+        for (int i = 0; i < this.size(); i++) {
+
+            if (this.get(i).getxCoor() == x && this.get(i).getyCoor() == y) {
+                Score.increaseScore(1);
+                this.remove(i);
+                return true;
+                //Score.saveScore();
+
+            }
+
+        }
+        return false;
+    }
+
+}
 
 
