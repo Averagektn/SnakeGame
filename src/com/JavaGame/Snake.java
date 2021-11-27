@@ -16,7 +16,7 @@ public class Snake<E> extends ArrayList<BodyPart> {
      */
 
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;/**Delete**/
     private int tailX;
     private int tailY;
     private boolean alive;
@@ -131,7 +131,7 @@ public class Snake<E> extends ArrayList<BodyPart> {
 
     public boolean isAlive() {
         return alive;
-    }
+    }/**Delete**/
 
     public void setAlive(boolean alive) {
         this.alive = alive;
