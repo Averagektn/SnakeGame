@@ -37,7 +37,12 @@ public class MouseInput extends JFrame implements MouseListener {
         //Help button
         //WARNING -- This button shows name of creators of the project
 
-
+        if (mx >= GameScreen.WIDTH / 7 + 100 && mx < GameScreen.WIDTH / 7 + 200 && GameScreen.State == GameScreen.STATE.MENU) {
+            if (my >= 225 && my <= 275) {
+                //Pressed Help Button
+                GameScreen.State = GameScreen.STATE.HELP;
+            }
+        }
 
         //g.drawString("Back to menu", 150,  300);
 
