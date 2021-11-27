@@ -11,3 +11,7 @@ import java.awt.*;
  * FOR C.T.S., DOCENT NESTERENKOV S.N.
  **/
 
+public class Frame extends JFrame {
+    private static Frame instanceFrame = new Frame();
+
+    private static final long serialVersionUID = 1L;
