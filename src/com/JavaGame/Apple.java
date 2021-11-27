@@ -20,3 +20,8 @@ public class Apple {
         g.setColor(Color.RED);
         g.fillRect(GameScreen.OFFSET+xCoor * width, GameScreen.OFFSET+yCoor * height, width, height);
     }
+
+    public int getxCoor() {
+        return xCoor;
+    }
+
