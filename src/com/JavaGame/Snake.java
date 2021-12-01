@@ -4,31 +4,61 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class Snake<E> extends ArrayList<BodyPart> {
 
+    /**
+     *
+     */
     public static final String DOWN = "Down";
+    /**
+     *
+     */
     public static final String TOP = "Up";
+    /**
+     *
+     */
     public static final String LEFT = "Left";
+    /**
+     *
+     */
     public static final String RIGHT = "Right";
 
     /**
      *
      */
-
-
-    private static final long serialVersionUID = 1L;/**Delete**/
+    private static final long serialVersionUID = 1L;
+    /**
+     *
+     */
     private int tailX;
+    /**
+     *
+     */
     private int tailY;
+    /**
+     *
+     */
     private boolean alive;
 
+    /**
+     *
+     */
+    private static final Snake instance = new Snake();
 
-    private static Snake instance = new Snake();
-
+    /**
+     *
+     */
     public Snake() {
         setAlive(true);
-
     }
 
+    /**
+     *
+     * @return boolean about suicide
+     */
     public boolean checkSnakeSuicide() {
 
         int headX = this.get(this.size() - 1).getxCoor();
@@ -44,19 +74,27 @@ public class Snake<E> extends ArrayList<BodyPart> {
         return false;
     }
 
+    /**
+     *
+     * @param leftLimit - border
+     * @param rightLimit - border
+     * @param topLimit - border
+     * @param downLimit - border
+     * @return integers of borders
+     */
     public boolean checkCrashWithWall(int leftLimit, int rightLimit,
                                       int topLimit, int downLimit) {
 
         int headX = this.get(this.size() - 1).getxCoor();
         int headY = this.get(this.size() - 1).getyCoor();
-        if (headX < leftLimit || headX > rightLimit || headY < topLimit
-                || headY > downLimit) {
-
-            return true;
-        }
-        return false;
+        return headX < leftLimit || headX > rightLimit || headY < topLimit
+                || headY > downLimit;
     }
 
+    /**
+     *
+     * @param g - graphics
+     */
     public void draw(Graphics g) {
         Color color = Color.GREEN;
         if(alive == false){
@@ -74,11 +112,14 @@ public class Snake<E> extends ArrayList<BodyPart> {
     }
 
 
+    /**
+     *
+     * @param direction - direction of moving
+     */
     public void snakeGo(String direction) {
         tailX = this.get(0).getxCoor();
         tailY = this.get(0).getyCoor();
 
-        // copy coordinate from next chain
         for (int i = 0; i < this.size() - 1; i++) {
 
             this.get(i).setxCoor(this.get(i + 1).getxCoor());
@@ -90,6 +131,12 @@ public class Snake<E> extends ArrayList<BodyPart> {
 
     }
 
+    /**
+     *
+     * @param xCoor - x coord
+     * @param yCoor - y coord
+     * @return boolean about snake coords
+     */
     public boolean snakeHasCoord(int xCoor, int yCoor) {
 
         for (int i = 0; i < this.size(); i++) {
@@ -103,6 +150,10 @@ public class Snake<E> extends ArrayList<BodyPart> {
         return false;
     }
 
+    /**
+     *
+     * @param SIZE_CELL - size of tail
+     */
     public void addElementToTail(int SIZE_CELL) {
 
         this.add(0, new BodyPart(tailX, tailY, SIZE_CELL));
@@ -110,6 +161,10 @@ public class Snake<E> extends ArrayList<BodyPart> {
     }
 
 
+    /**
+     *
+     * @param direction - direction of snake's head
+     */
     private void goForSnakeHead(String direction) {
 
         BodyPart head = this.get(this.size() - 1);
@@ -129,16 +184,29 @@ public class Snake<E> extends ArrayList<BodyPart> {
 
     }
 
+    /**
+     *
+     * @return - boolean if snake lives yet
+     */
     public boolean isAlive() {
         return alive;
-    }/**Delete**/
+    }
 
+    /**
+     *
+     * @param alive - boolean if snake lives yet
+     */
     public void setAlive(boolean alive) {
         this.alive = alive;
     }
 
+    /**
+     *
+     * @return snake
+     */
     public static Snake getInstanceSnake() {
         return instance;
     }
 
 }
+

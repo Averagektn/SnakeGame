@@ -4,17 +4,33 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ *
+ */
 public class AppleManager<E> extends ArrayList<Apple> {
+    /**
+     *
+     */
     private Random random;
+    /**
+     *
+     */
     private int fieldSize;
+    /**
+     *
+     */
     private int sizeCell;
 
     /**
      *
      */
+    private static final long serialVersionUID = 1L;
 
-    private static final long serialVersionUID = 1L;/**Delete**/
-
+    /**
+     *
+     * @param fieldSizeParam - field parameter size
+     * @param sizeCellParam - cell parameter size
+     */
     public AppleManager(int fieldSizeParam, int sizeCellParam) {
         fieldSize = fieldSizeParam;
         sizeCell = sizeCellParam;
@@ -23,6 +39,10 @@ public class AppleManager<E> extends ArrayList<Apple> {
 
     }
 
+    /**
+     *
+     * @param snake - random coord
+     */
     public void addAppleIfNot(Snake snake) {
 
         if (this.size() == 0) {
@@ -39,6 +59,11 @@ public class AppleManager<E> extends ArrayList<Apple> {
         }
 
     }
+
+    /**
+     *
+     * @param g - graphics
+     */
     public void draw(Graphics g) {
 
         for (int i = 0; i < this.size(); i++) {
@@ -47,6 +72,12 @@ public class AppleManager<E> extends ArrayList<Apple> {
 
     }
 
+    /**
+     *
+     * @param x - x coord
+     * @param y - y coord
+     * @return boolean about coord
+     */
     public boolean isCoordHasFoodAndEat(int x, int y) {
         for (int i = 0; i < this.size(); i++) {
 
@@ -54,8 +85,6 @@ public class AppleManager<E> extends ArrayList<Apple> {
                 Score.increaseScore(1);
                 this.remove(i);
                 return true;
-                //Score.saveScore();
-
             }
 
         }
