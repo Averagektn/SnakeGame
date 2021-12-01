@@ -3,17 +3,37 @@ package com.JavaGame;
 import javax.swing.*;
 import java.awt.*;
 
-//import java.net.PortUnreachableException;
-
+/**
+ * menu
+ */
 public class Menu extends JFrame {
 
-    private static Menu instanceMenu = new Menu();
+    /**
+     *
+     */
+    private static final Menu instanceMenu = new Menu();
 
+    /**
+     *
+     */
     public Rectangle playButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 125, 100, 50);
+    /**
+     *
+     */
     public Rectangle editorsButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 225, 100, 50);
+    /**
+     *
+     */
     public Rectangle quitButton = new Rectangle(GameScreen.WIDTH / 7 + 100, 325, 100, 50);
+    /**
+     *
+     */
     public Rectangle backToMenuButton = new Rectangle(GameScreen.WIDTH / 7, 275, 100, 50);
 
+    /**
+     *
+     * @param g - graphics
+     */
     public void render (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
 
@@ -33,16 +53,23 @@ public class Menu extends JFrame {
 
     }
 
+    /**
+     *
+     * @param g - graphics
+     */
     public void scoreCounter (Graphics g) {
         Font scF = new Font("arial", Font.BOLD, 20);
         g.setFont(scF);
-        //scF -- Font for score
 
         g.setColor(Color.RED);
 
         g.drawString("Score: " + Score.getScore(), 20, 18);
     }
 
+    /**
+     *
+     * @param g - graphics (world)
+     */
     public void gameOverWord (Graphics g) {
 
         Font fnt2 = new Font("arial", Font.BOLD, 60);
@@ -53,17 +80,14 @@ public class Menu extends JFrame {
         Font fntMenuBack = new Font("italiano", Font.ITALIC, 20);
         g.setFont(fntMenuBack);
         g.drawString("Back to menu. Click space", GameScreen.WIDTH / 4,  300);
+    }
 
-        //g.drawString("Your score: " + Score.getScore(), 150, 200);
-
-        /**Font fnt3 = new Font("arial", Font.BOLD, 30);
-        g.setFont(fnt3);
-        g3d.draw(backToMenuButton);
-        g.drawString("Menu", backToMenuButton.x + 20, backToMenuButton.y + 30);
-         **/
-     }
+    /**
+     *
+     * @param с - graphics
+     */
     public void creatorListAndRules (Graphics с) {
-        Font fnt4 = new Font("arial1", Font.ITALIC, 30); //Font for creators/rule menu
+        Font fnt4 = new Font("arial1", Font.ITALIC, 30);
         Graphics2D g4d = (Graphics2D) с;
         с.setFont(fnt4);
         g4d.draw(backToMenuButton);
@@ -80,7 +104,12 @@ public class Menu extends JFrame {
 
     }
 
+    /**
+     *
+     * @return menu
+     */
     public static Menu getInstance() {
         return instanceMenu;
     }
 }
+

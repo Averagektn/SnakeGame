@@ -7,54 +7,131 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-
+/**
+ * game screen
+ */
 public class GameScreen extends JPanel implements ActionListener {
 
     /**
      *
      */
     private static final long serialVersionUID = 1L;
+    /**
+     *
+     */
     public static final int OFFSET = 20;
-    //public static final int SEPARATOR = 1;
+    /**
+     *
+     */
     public static final int SIZE_CELL = 12;
+    /**
+     *
+     */
     public static final int FIELD_SIZE = 30;
 
+    /**
+     *
+     */
     private int score;
 
-    private static GameScreen instance = new GameScreen();
+    /**
+     *
+     */
+    private static final GameScreen instance = new GameScreen();
 
+    /**
+     *
+     */
     public static final int WIDTH = 400, HEIGHT = 400;
+    /**
+     *
+     */
     public static final String DOWN = "Down";
+    /**
+     *
+     */
     public static final String TOP = "Up";
+    /**
+     *
+     */
     public static final String LEFT = "Left";
+    /**
+     *
+     */
     public static final String RIGHT = "Right";
 
+    /**
+     *
+     */
     private String keyDirection;
+    /**
+     *
+     */
     private String direction;
 
+    /**
+     *
+     */
     private final Key key;
 
-    private int speed = 120;
+    /**
+     *
+     */
+    private final int speed = 120;
+    /**
+     *
+     */
     Timer clock = new Timer(speed, this);
-    private AppleManager<Apple> apples;
+    /**
+     *
+     */
+    private final AppleManager<Apple> apples;
 
-    private Snake<BodyPart> snake;
+    /**
+     *
+     */
+    private final Snake<BodyPart> snake;
 
+    /**
+     *
+     */
     private int xCoor, yCoor;
 
+    /**
+     *
+     */
     private Menu menu;
 
-    //public int SCORE = 0;
-
-    public static enum STATE {
+    /**
+     *
+     */
+    public enum STATE {
+        /**
+         *
+         */
         MENU,
+        /**
+         *
+         */
         GAME,
+        /**
+         *
+         */
         GAMEOVER,
+        /**
+         *
+         */
         HELP
     }
 
+    /**
+     *
+     */
     public static STATE State = STATE.MENU;
 
+    /**
+     *
+     */
     public GameScreen() {
         setFocusable(true);
         key = new Key();
@@ -67,6 +144,9 @@ public class GameScreen extends JPanel implements ActionListener {
         start();
     }
 
+    /**
+     *
+     */
     private void start() {
 
         xCoor = 0;
@@ -83,6 +163,10 @@ public class GameScreen extends JPanel implements ActionListener {
         clock.start();
     }
 
+    /**
+     *
+     * @param arg0 - unused parameter
+     */
     @Override
     public void actionPerformed(ActionEvent arg0) {
 
@@ -112,6 +196,9 @@ public class GameScreen extends JPanel implements ActionListener {
         repaint();
     }
 
+    /**
+     *
+     */
     private void stop() {
 
         snake.setAlive(false);
@@ -122,6 +209,9 @@ public class GameScreen extends JPanel implements ActionListener {
         Score.resetScore();
     }
 
+    /**
+     *
+     */
     private void restart() {
 
         snake.clear();
@@ -131,15 +221,16 @@ public class GameScreen extends JPanel implements ActionListener {
         start();
     }
 
-    //---------------------------------------------------------------
+    /**
+     *
+     * @param g - graphics
+     */
     public void paint(Graphics g) {
-        // System.out.println(Math.random());
         g.clearRect(OFFSET, OFFSET, WIDTH, HEIGHT);
 
         g.setColor(new Color(10, 50, 0));
         g.fillRect(0, 0, WIDTH, HEIGHT);
         menu = new Menu();
-        //---------------------------------------------------------------
         if (State == STATE.GAME) {
             g.setColor(Color.BLACK);
             for (int i = 0; i < FIELD_SIZE + 1; i++) {
@@ -163,7 +254,9 @@ public class GameScreen extends JPanel implements ActionListener {
         }
     }
 
-    //---------------------------------------------------------------
+    /**
+     *
+     */
     private class Key implements KeyListener {
 
         public void keyPressed(KeyEvent e) {
@@ -171,28 +264,32 @@ public class GameScreen extends JPanel implements ActionListener {
             int code = e.getKeyCode();
             String onClicked = KeyEvent.getKeyText(code);
 
-            if (onClicked == GameScreen.DOWN
-                    && direction != GameScreen.TOP) {
+            if (onClicked == GameScreen.DOWN && direction != GameScreen.TOP) {
                 keyDirection = DOWN;
-            } else if (onClicked == GameScreen.TOP
-                    && direction != GameScreen.DOWN) {
+            } else if (onClicked == GameScreen.TOP && direction != GameScreen.DOWN) {
                 keyDirection = TOP;
-            } else if (onClicked == GameScreen.RIGHT
-                    && direction != GameScreen.LEFT) {
+            } else if (onClicked == GameScreen.RIGHT && direction != GameScreen.LEFT) {
                 keyDirection = RIGHT;
-            } else if (onClicked == GameScreen.LEFT
-                    && direction != GameScreen.RIGHT) {
+            } else if (onClicked == GameScreen.LEFT && direction != GameScreen.RIGHT) {
                 keyDirection = LEFT;
             } else if (onClicked == "Space" && GameScreen.State == STATE.GAMEOVER) {
                 restart();
             }
         }
 
+        /**
+         *
+         * @param arg0 - unused void
+         */
         @Override
         public void keyReleased(KeyEvent arg0) {
 
         }
 
+        /**
+         *
+         * @param arg0 - unused void
+         */
         @Override
         public void keyTyped(KeyEvent arg0) {
 
@@ -200,6 +297,10 @@ public class GameScreen extends JPanel implements ActionListener {
 
     }
 
+    /**
+     *
+     * @return game screen
+     */
     public static GameScreen getInstance() {
         return instance;
     }

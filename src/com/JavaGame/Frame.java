@@ -10,10 +10,20 @@ import java.awt.*;
  * NIKITA GLUSHACHENKO
  * FOR C.T.S., DOCENT NESTERENKOV S.N.
  **/
-
 public class Frame extends JFrame {
-    private static Frame instanceFrame = new Frame();
+    /**
+     *
+     */
+    private static final Frame instanceFrame = new Frame();
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
+    /**
+     *
+     */
     public Frame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Game Snake");
@@ -22,18 +32,33 @@ public class Frame extends JFrame {
         init();
     }
 
+    /**
+     *
+     */
     public void init() {
+        setLayout(new GridLayout(1, 1, 0, 0));
         GameScreen Screen = new GameScreen();
         add(Screen);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
-        //WordsLabel.getInstance().updateText("Snake Game");
     }
+
+    /**
+     * @param args - unused parameter
+     */
     public static void main(String[] args) {
 
+        new Frame();
     }
-    public static Frame getInstance() { return instanceFrame; }
 
+    /**
+     * @return frame
+     */
+    public static Frame getInstance() {
+        return instanceFrame;
+
+    }
 }
+
 
